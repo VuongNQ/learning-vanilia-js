@@ -23,19 +23,19 @@ const option6 = [
   },
 ];
 
-const array = option.findLastIndex(item => item > 2);
+const array = option.lastIndexOf(item => item > 2);
 console.log(array); //vi tri 3 lay tu phai qua trai
-const array1 = option1.findLastIndex(item => item);
+const array1 = option1.lastIndexOf(item => item);
 console.log(array1); // vi tri true lay tu phai qua trai
-const array2 = option2.findLastIndex(item => item > "" );
+const array2 = option2.lastIndexOf(item => item > "" );
 console.log(array2); // vi tri "bump" lon hon ""
-const array3 = option3.findLastIndex(item => item < 27 && typeof item === "number");
+const array3 = option3.lastIndexOf(item => item < 27 && typeof item === "number");
 console.log(array3); // vi tri 2 (12)
-const array4 = option4.findLastIndex(item => item > "" && typeof item === "string")
+const array4 = option4.lastIndexOf(item => item > "" && typeof item === "string")
 console.log(array4); //vi tri 5 ("kiki")
-const array5 = option5.findLastIndex(item => item);
+const array5 = option5.lastIndexOf(item => item);
 console.log(array5); //vi tri true
-const array6 = option6.findLastIndex(item => item.e === "anh m" && typeof item === "string");
+const array6 = option6.lastIndexOf(item => item.e === "anh m" && typeof item === "string");
 console.log(array6)// vi tri 1
 
 
