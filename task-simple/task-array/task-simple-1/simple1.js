@@ -37,7 +37,11 @@ const data = [
 ];
 
 // * viet function dem co bao nhieu country trong array
-const Price = data.map(item => item.country != "" ? "country" : false)
+/* cach 1 : */
+const Price= data.map(item => item.country != "" ? "country" : false)
+/* cach 2 */
+const Price2 = data.lastIndexOf(item => item.country > "")
+
 // * viet function tim index cua object nao co conten dai nhat va object nao co content ngan nhat
 //1. tim content dai nhat
 const setPriceMax = data.map(item => item.content.length === 246 ? item.content : false)
