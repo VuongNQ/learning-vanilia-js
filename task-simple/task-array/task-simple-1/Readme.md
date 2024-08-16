@@ -43,7 +43,7 @@ const data = [
 
 # Tạo file js trong task và thực hiện các yêu cầu dưới
 
-- Viết function(countCountry) đếm có bao nhiêu country trong array, arg là arry kiêm tra, trả về 1 object có 2 property, count: số country, list: array country
+- Viết function(countCountry) đếm có bao nhiêu country trong array, country nào trùng tên tính là 1 country, input là array kiểm tra, trả về 1 object có 2 property, count: số country, list: array country
 
 ```
 function countCountry (arrayCheck){
@@ -61,7 +61,7 @@ console.log(result);
 }
 ```
 
-- Viết function(findIndexMinMaxContent) tìm index của object nào có content dài nhất và object nào có content ngắn nhất
+- Viết function(findIndexMinMaxContent) tìm index của object nào có content dài nhất và object nào có content ngắn nhất. Loop array để kiểm tra mỗi item để check min, max content 
 
 ```
 function findIndexMinMaxContent(arrayCheck){
@@ -79,7 +79,7 @@ console.log(result);
 }
 ```
 
-- Viết function(findPostalZip) tìm object có postalZip mà có chứa kí tự khác kí tự chữ số
+- Viết function(findPostalZip) tìm object có postalZip mà có chứa kí tự khác kí tự chữ số. Loop từng item trong array để kiểm tra từng postalZip 
 
 ```
 function findPostalZip(arrayCheck){
