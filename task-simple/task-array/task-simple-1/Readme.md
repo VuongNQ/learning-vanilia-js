@@ -43,7 +43,56 @@ const data = [
 
 # Tạo file js trong task và thực hiện các yêu cầu dưới
 
-- Viết function đếm có bao nhiêu country trong array 
-- Viết function tìm index của object nào có content dài nhất và object nào có content ngắn nhất
-- Viết function tìm object có postalZip mà có chứa kí tự khác kí tự chữ số
+- Viết function(countCountry) đếm có bao nhiêu country trong array, arg là arry kiêm tra, trả về 1 object có 2 property, count: số country, list: array country
 
+```
+function countCountry (arrayCheck){
+	// code in here
+}
+
+- run check
+const result = countCountry(data);
+console.log(result);
+
+- example result:
+{
+	count: 2,
+	listCountry: ["Sweden", "France"]
+}
+```
+
+- Viết function(findIndexMinMaxContent) tìm index của object nào có content dài nhất và object nào có content ngắn nhất
+
+```
+function findIndexMinMaxContent(arrayCheck){
+	// code here
+}
+
+- run check
+const result = findIndexMinMaxContent(data);
+console.log(result);
+
+- example result:
+{
+	min: 2,
+	max: 0
+}
+```
+
+- Viết function(findPostalZip) tìm object có postalZip mà có chứa kí tự khác kí tự chữ số
+
+```
+function findPostalZip(arrayCheck){
+	// code here
+}
+
+- run check
+const result = findPostalZip(data);
+console.log(result);
+
+- example result:
+{
+	"postalZip": "24-871"
+}
+
+```
