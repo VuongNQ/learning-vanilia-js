@@ -50,3 +50,5 @@ const setPriceMin = data.map(item => item.content.length < 215 ? item.content: f
 // * viet function tim object co postalZip ma co chua ki tu chu so
 const postaZip = data.map(item => item.postalZip.length === 6 ? item.postalZip : false )
 console.log(postaZip)
+
+const fil = data.filter(item => item.content === "")
