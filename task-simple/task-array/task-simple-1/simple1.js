@@ -58,6 +58,32 @@ const result = countCountry(data);
 console.log(result);
 
 // * viet function tim index cua object nao co conten dai nhat va object nao co content ngan nhat
-//1. tim content dai nhat
-//2.tim content nho nhat
+function findIndexMinMaxContent(data) {
+  const array = data;
+  let min = 0;
+  let max = 0;
+  let minLength = array[0].length;
+  let maxLength = array[0].length;
+  if(array.length === 0) {
+    return {
+      min : -1, max: -1
+    }
+  }
+  for(let i = 0 ; i < array.length;i++) {
+    const currentLength = array[i].content.length
+    if(currentLength < minLength) {
+      minLength = currentLength;
+      min = i
+    } else if(currentLength > maxLength) {
+      maxLength = currentLength
+      max = i
+    }
+  }
+  return {
+    min, max
+  }
+  /* console.log(minLength) */
+}
+const resultMixMax = findIndexMinMaxContent(data);
+console.log(resultMixMax)
 // * viet function tim object co postalZip ma co chua ki tu chu so
