@@ -87,3 +87,20 @@ function findIndexMinMaxContent(data) {
 const resultMixMax = findIndexMinMaxContent(data);
 console.log(resultMixMax)
 // * viet function tim object co postalZip ma co chua ki tu chu so
+function findPostalZip(data) {
+	const array = data;
+  function checkString(check) {
+		return /^\d+$/.test(check)
+	}
+	for(let i = 0; i < array.length; i++) {
+		const item = array[i];
+		if(item.postalZip && !checkString(item.postalZip)) {
+			return {
+				"postalZip": item.postalZip
+			};
+		}
+	}
+	return undefined;
+}
+const resultPostalZip = findPostalZip(data)
+console.log(resultPostalZip)
