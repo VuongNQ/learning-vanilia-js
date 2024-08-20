@@ -64,7 +64,7 @@ function countCountry2() {
   const count = arrayFlat.length;
   return {
     count,
-    list: setObject2.size,
+    list: [...setObject2],
   };
 }
 const result2 = countCountry2(data);
