@@ -56,6 +56,19 @@ function countCountry(data) {
 }
 const result = countCountry(data);
 console.log(result);
+/* cach 2 : */
+function countCountry2() {
+  const array = data;
+  const setObject2 = new Set();
+  const arrayFlat = array.flatMap((item) => setObject2.add(item.country));
+  const count = arrayFlat.length;
+  return {
+    count,
+    list: setObject2.size,
+  };
+}
+const result2 = countCountry2(data);
+console.log(result2);
 
 // * viet function tim index cua object nao co conten dai nhat va object nao co content ngan nhat
 function findIndexMinMaxContent(data) {
@@ -64,43 +77,45 @@ function findIndexMinMaxContent(data) {
   let max = 0;
   let minLength = array[0].length;
   let maxLength = array[0].length;
-  if(array.length === 0) {
+  if (array.length === 0) {
     return {
-      min : -1, max: -1
-    }
+      min: -1,
+      max: -1,
+    };
   }
-  for(let i = 0 ; i < array.length;i++) {
-    const currentLength = array[i].content.length
-    if(currentLength < minLength) {
+  for (let i = 0; i < array.length; i++) {
+    const currentLength = array[i].content.length;
+    if (currentLength < minLength) {
       minLength = currentLength;
-      min = i
-    } else if(currentLength > maxLength) {
-      maxLength = currentLength
-      max = i
+      min = i;
+    } else if (currentLength > maxLength) {
+      maxLength = currentLength;
+      max = i;
     }
   }
   return {
-    min, max
-  }
+    min,
+    max,
+  };
   /* console.log(minLength) */
 }
 const resultMixMax = findIndexMinMaxContent(data);
-console.log(resultMixMax)
+console.log(resultMixMax);
 // * viet function tim object co postalZip ma co chua ki tu chu so
 function findPostalZip(data) {
-	const array = data;
+  const array = data;
   function checkString(check) {
-		return /^\d+$/.test(check)
-	}
-	for(let i = 0; i < array.length; i++) {
-		const item = array[i];
-		if(item.postalZip && !checkString(item.postalZip)) {
-			return {
-				"postalZip": item.postalZip
-			};
-		}
-	}
-	return undefined;
+    return /^\d+$/.test(check);
+  }
+  for (let i = 0; i < array.length; i++) {
+    const item = array[i];
+    if (item.postalZip && !checkString(item.postalZip)) {
+      return {
+        postalZip: item.postalZip,
+      };
+    }
+  }
+  return undefined;
 }
-const resultPostalZip = findPostalZip(data)
-console.log(resultPostalZip)
+const resultPostalZip = findPostalZip(data);
+console.log(resultPostalZip);
