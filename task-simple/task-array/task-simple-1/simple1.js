@@ -48,10 +48,10 @@ function countCountry(data) {
   const setObject = new Set();
   array.forEach((item) => setObject.add(item.country));
   const arrCheck = array.filter((item) => setObject.has(item.country));
-  const count = arrCheck.length;
+  const count = [...setObject].length;
   return {
     count,
-    list: setObject.size,
+    list: [...setObject],
   };
 }
 const result = countCountry(data);
@@ -60,11 +60,12 @@ console.log(result);
 function countCountry2() {
   const array = data;
   const setObject2 = new Set();
-  const arrayFlat = array.flatMap((item) => setObject2.add(item.country));
-  const count = arrayFlat.length;
+  array.flatMap((item) => setObject2.add(item.country));
+  const count = [...setObject2].length;
+  const list = [...setObject2];
   return {
-    count,
-    list: [...setObject2],
+    count, // 3
+    list: list, //["France", "Russian Federation", "Sweden"]
   };
 }
 const result2 = countCountry2(data);
