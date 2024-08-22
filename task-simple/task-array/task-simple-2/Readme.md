@@ -54,8 +54,29 @@ function groupCountry (arrayCheck){
 const result = groupCountry(data);
 console.log(result);
 
+1.nhóm các country trong array thành object với key là tên country đã viết thường
+2.thay khoảng trắng bằng gạch "_"
+3.mỗi key có value là array
+	
 - example result:
+
+
 {
+	france: [
+		{
+				"content": "pede nec ante blandit viverra. Donec tempus, lorem fringilla ornare placerat, orci lacus vestibulum lorem, sit amet ultricies sem magna nec quam. Curabitur vel lectus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur",
+	    	"name": "Connor R. Lynch",
+		    "region": "Haute-Normandie",
+	    	"postalZip": "7157"
+		},
+		{
+					"content": "nec enim. Nunc ut erat. Sed nunc est, mollis non, cursus non, egestas a, dui. Cras pellentesque. Sed dictum. Proin eget odio. Aliquam vulputate ullamcorper magna. Sed eu eros. Nam consequat dolor vitae dolor. Donec",
+		     "name": "Janna D. Mccoy",
+		     "region": "Champagne-Ardenne",
+		    "postalZip": "1204"
+		}
+	]
+	,
 	russian_federation: [
     {
 
@@ -64,11 +85,21 @@ console.log(result);
 		"region": "Nizhny Novgorod Oblast",
 		"postalZip": "27-317"
     },
+		{
+
     "content": "Cras interdum. Nunc sollicitudin commodo ipsum. Suspendisse non leo. Vivamus nibh dolor, nonummy ac, feugiat non, lobortis quis, pede. Suspendisse dui. Fusce diam nunc, ullamcorper eu, euismod ac, fermentum vel, mauris. Integer sem elit, pharetra",
 		"name": "Noah W. Barnes",
 		"region": "Irkutsk Oblast",
 		"postalZip": "25435"
-
+		}
   ]
+   sweden: [
+		{
+		"content": "nisi magna sed dui. Fusce aliquam, enim nec tempus scelerisque, lorem ipsum sodales purus, in molestie tortor nibh sit amet orci. Ut sagittis lobortis mauris. Suspendisse aliquet molestie tellus. Aenean egestas hendrerit neque. In ornare",
+		"name": "Lisandra J. Barton",
+		"region": "Jönköpings län",
+		"postalZip": "24-871"
+		}
+	 ]
 }
 ```

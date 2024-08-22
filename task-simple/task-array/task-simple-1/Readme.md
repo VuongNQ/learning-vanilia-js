@@ -82,6 +82,12 @@ console.log(result);
 - Viết function(findPostalZip) tìm object có postalZip mà có chứa kí tự khác kí tự chữ số. Loop từng item trong array để kiểm tra từng postalZip 
 
 ```
+
+{
+	
+}
+
+
 function findPostalZip(arrayCheck){
 	// code here
 }
