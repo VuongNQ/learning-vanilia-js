@@ -42,19 +42,16 @@ const data = [
 ];
 
 const groupCountry = (data) => {
-  const array = data;
-  const groupObject = {};
-  array.forEach((item) => {
-    const current = item;
+  data.forEach((item) => {
     const key = item.country.toLowerCase().replace(/\s+/g, "_");
     if (!groupCountry[key]) {
       groupCountry[key] = [];
     }
-    if (current.country && delete item.country) {
-      return groupCountry[key].push(current);
+    if (item.country && delete item.country) {
+      return groupCountry[key].push(item);
     }
   });
-  return groupObject;
+  return groupCountry;
 };
 const result = groupCountry(data);
 console.log(result);
