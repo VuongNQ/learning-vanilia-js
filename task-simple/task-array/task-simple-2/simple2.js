@@ -40,18 +40,19 @@ const data = [
     postalZip: "24-871",
   },
 ];
-const groupCountry = (data) => {
-  const object = {}
-  data.forEach((item) => {
-    const key = item.country.toLowerCase().replace(/\s+/g, "_");
-    if (!object[key]) {
-      object[key] = [];
-    }
-    if (item.country && delete item.country) {
-      return object[key].push(item);
+const groupCountry = (array) => {
+  const object = {};
+  array.forEach((item) => {
+    if (typeof item.country === "string") {
+      const key = item.country.toLowerCase().replace(/\s+/g, "_");
+      if (!object[key]) {
+        object[key] = [];
+      }
+      object[key].push({ ...item, country: undefined });
+    } else {
+      console.log("aaa");
     }
   });
   return object;
 };
-const result = groupCountry(data);
-console.log(result);
+groupCountry(data);

@@ -71,6 +71,13 @@ function findIndexMinMaxContent(arrayCheck){
 - run check
 const result = findIndexMinMaxContent(data);
 console.log(result);
+   /* const key = item.country.toLowerCase().replace(/\s+/g, "_");
+    if (!object[key]) {
+      return object[key] = [];
+    }
+    if (item.country && delete item.country) {
+      return object[key].push(item);
+    } */
 
 - example result:
 {
