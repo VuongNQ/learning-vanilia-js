@@ -51,15 +51,18 @@ const data = [
 ];
 const groupCountry = (array) => {
   const groupObject = array.reduce((accument, accumentValue) => {
-    if (typeof accumentValue.country === "string") {
-      const key = accumentValue.country.toLowerCase().replace(/\s+/g, "_");
-      if (!accument[key]) {
-        accument[key] = [];
+    if(typeof accumentValue.country === "string") {
+      /* dieu kien value phai la string */
+      const key = accumentValue.country.toLowerCase().replace(/\s+/g, "_")
+      if(!accument[key]) {
+        /* dieu kien phai bang array */
+         accument[key] = []
       }
-      accument[key].push({ ...accumentValue, country: undefined });
+      /* mang phai day vao spread operator them moi nhung ma khong lam thay doi goc */
+      accument[key].push({...accumentValue, country: undefined})
     }
     return accument;
-  }, {});
+  },{});
   return groupObject;
 };
 const result = groupCountry(data);
