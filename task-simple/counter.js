@@ -1,11 +1,11 @@
 export function setupCounter(element) {
-  let counter = 0
+  let counter = 0;
   const setCounter = (count) => {
-    counter = count
-    element.innerHTML = `count is ${counter}`
-  }
-  element.addEventListener('click', () => setCounter(counter + 1))
-  setCounter(0)
+    counter = count;
+    element.innerHTML = `count is ${counter}`;
+  };
+  element.addEventListener("click", () => setCounter(counter + 1));
+  setCounter(0);
 }
 const data = [
   {
@@ -49,18 +49,18 @@ const data = [
     postalZip: "24-871",
   },
 ];
-const groupCountry = (data) => {
-  const object = {};
-  data.forEach((item) => {
-    const key = item.country.toLowerCase().replace(/\s+/g, "_");
-    if (!object[key]) {
-      object[key] = [];
+const groupCountry = (array) => {
+  const groupObject = array.reduce((accument, accumentValue) => {
+    if (typeof accumentValue.country === "string") {
+      const key = accumentValue.country.toLowerCase().replace(/\s+/g, "_");
+      if (!accument[key]) {
+        accument[key] = [];
+      }
+      accument[key].push({ ...accumentValue, country: undefined });
     }
-    if (item.country && delete item.country) {
-      return object[key].push(item);
-    }
-  });
-  return object;
+    return accument;
+  }, {});
+  return groupObject;
 };
 const result = groupCountry(data);
 console.log(result);

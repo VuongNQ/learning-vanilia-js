@@ -41,8 +41,18 @@ const data = [
   },
 ];
 const groupCountry = (array) => {
-  const object = {};
-  array.forEach((item) => {
+  const groupObject = array.reduce((accument, accumentValue) => {
+    if (typeof accumentValue.country === "string") {
+      const key = accumentValue.country.toLowerCase().replace(/\s+/g, "_");
+      if (!accument[key]) {
+        accument[key] = [];
+      }
+      accument[key].push({ ...accumentValue, country: undefined });
+    }
+    return accument;
+  }, {});
+  return groupObject;
+  /*   array.forEach((item) => {
     if (typeof item.country === "string") {
       const key = item.country.toLowerCase().replace(/\s+/g, "_");
       if (!object[key]) {
@@ -52,7 +62,7 @@ const groupCountry = (array) => {
     } else {
       console.log("aaa");
     }
-  });
-  return object;
+  }); */
+  return groupObject;
 };
 groupCountry(data);
