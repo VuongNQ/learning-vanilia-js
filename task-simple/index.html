@@ -1,22 +1,48 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="stylesheet" href="style.scss">
-    <title>Vite App</title>
-  </head>
-  <body>
-   <!-- id: định danh là duy nhất cho mỗi phần tử -->
-   <!-- className: Tên lớp - có thể dùng cho nhiều phần tử -->
-   <!-- tagName : tên thẻ HTMl -->
-   
-    <div id="app">
-      <div id="header"></div>
-      <div id="body"></div>
-      <div id="footer"></div>
-    </div>
-    <script type="module" src="/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.scss">
+  <title>Vite App</title>
+</head>
+
+<body>
+  <!-- id: định danh là duy nhất cho mỗi phần tử -->
+  <!-- className: Tên lớp - có thể dùng cho nhiều phần tử -->
+  <!-- tagName : tên thẻ HTMl -->
+  <!-- innerHTML: Trả về mã HTML bên trong phần tử hiện tại. Đoạn -->
+  <!-- outerHTML: Trả về mã HTML của phần tử hiện tại. -->
+  <!-- textContent:  Trả về 1 chuỗi kí tự chứa nội dung của tất cả nút văn bản bên trong phần tử hiện tại. -->
+  <!-- attributes: Tập các thuộc tính như id, name, class, href, title… -->
+  <!-- style: Tập các định dạng của phần tử hiện tại -->
+  <!-- value: Lấy giá trị của thành phần được chọn thành một biến. -->
+  <!-- ---Phương thức ---- -->
+  <!-- getElementById(id): Tham chiếu đến 1 nút duy nhất có thuộc tính id giống với id cần tìm.
+       getElementsByTagName(tagname): Tham chiếu đến tất cả các nút có thuộc tính tagName giống với tên thẻ cần tìm, hay hiểu đơn giản hơn là tìm tất cả các phần tử DOM mang thẻ HTML cùng loại. Nếu muốn truy xuất đến toàn bộ thẻ trong tài liệu HTML thì hãy sử dụng document.       getElementsByTagName('*').
+       getElementsByName(name): Tham chiếu đến tất cả các nút có thuộc tính name cần tìm.
+       getAttribute(attributeName): Lấy giá trị của thuộc tính.
+       setAttribute(attributeName, value): Sửa giá trị của thuộc tính.
+       appendChild(node): Thêm 1 nút con vào nút hiện tại.
+       removeChild(node): Xóa 1 nút con khỏi nút hiện tại. -->
+  <!-- Thuộc tính quan hệ: -->
+ <!--  parentNode: Nút cha
+       childNodes: Các nút con
+       firstChild: Nút con đầu tiên
+       lastChild: Nút con cuối cùng
+       nextSibling: Nút anh em liền kề sau
+       previousSibling: Nút anh em liền kề trước -->
+  <div id="app">
+    <div id="header"></div>
+    <div id="body"></div>
+    <div id="footer"></div>
+  </div>
+  <script type="module" src="/main.js">
+      var newStr = document.getElementsByClassName('#header');
+          
+  </script>
+</body>
+
 </html>

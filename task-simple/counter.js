@@ -284,27 +284,23 @@ const users = [
     age: 20,
   },
 ];
-//Level 3:
-class Person {
-  constructor(firstName, lastName, age , country, city) {
-    this.firstName = firstName
-    this.lastName  = lastName 
-    this.age = age 
-    this.country = country
-    this.city = city
+let cars = [
+  {
+    "color": "purple",
+    "type": "minivan",
+    "registration": new Date('2017-01-03'),
+    "capacity": 7
+  },
+  {
+    "color": "red",
+    "type": "station wagon",
+    "registration": new Date('2018-03-03'),
+    "capacity": 5
+  },
+  {
+    "color": "HCM",
+    "type": "Mercedes",
+    "registration": new Date('2017-01-03'),
+    "capacity": 2
   }
-  getFullName() {
-    const fullName = this.firstName + " " + this.lastName
-    return fullName
-  }
-  get getFirstName() {
-     return this.firstName
-  }
-  get getLastName() {
-    return this.lastName
-  }
-}
-const person1 = new Person("anh" , "quốc" , 19 , "number" , "alo");
-console.log(person1.country)
-console.log(person1.getFirstName)
-console.log(person1.lastName)
+]
